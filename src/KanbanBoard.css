@@ -1,0 +1,181 @@
+.board{
+    display: flex;
+    gap:20px;
+    padding:20px;
+
+}
+
+.column {
+  flex: 1;
+  margin: 10px;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.column:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+}
+
+.column h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  letter-spacing: 1px;
+}
+
+
+.column-red {
+  background: linear-gradient(135deg, #ff7b7b, #ff4d4d);
+  border-left: 8px solid #c0392b;
+}
+
+.column-yellow {
+  background: linear-gradient(135deg, #fff685, #f1c40f);
+  border-left: 8px solid #d4ac0d;
+}
+
+.column-green {
+  background: linear-gradient(135deg, #a8eb12, #58d68d);
+  border-left: 8px solid #27ae60;
+}
+
+.column::-webkit-scrollbar {
+  width: 8px;
+}
+.column::-webkit-scrollbar-track {
+  background: transparent;
+}
+.column::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.card{
+    background: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+    transition: transforms o.2s ease;
+}
+
+.card-over{
+    transform: 1.03;
+}
+
+.task-form {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  margin: 30px auto;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.task-form input[type="text"] {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  min-width: 240px;
+  color: #333;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.task-form input[type="text"]::placeholder {
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+.task-form input[type="text"]:focus {
+  outline: none;
+  background: #fff;
+  border: 2px solid #00c6ff;
+  box-shadow: 0 0 0 4px rgba(0, 198, 255, 0.2);
+}
+
+.task-form button {
+  background: linear-gradient(135deg, #00c6ff, #085ba4);
+  color:white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 114, 255, 0.3);
+}
+
+.task-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trash-drop-zone{
+  margin: 2px auto;
+  padding: 16px 24px;
+  background: white;
+  border: 2px dashed #ff4d4d;
+  border-radius: 10px;
+  color: black;
+  font-size: 1.2rem;
+  width: fit-content;
+  text-align: center;
+  transition: background-color 0.3s;
+
+
+}
+
+.trash-drop-zone:hover{
+  background-color: #ffe5e5;
+  cursor: pointer;
+}
+
+.edit-input {
+  width: 70%;
+  padding: 4px;
+  margin-right: 5px;
+}
+
+.edit-btn, .save-btn {
+  margin-left: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
